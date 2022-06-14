@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Service>
+@{
+    ViewData["Title"] = "Index";
+    int order = 1;
+}
+
+<a asp-action="Create" class="btn btn-outline-success">Create</a>
+<table class="table text-center table-bordered my-4">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Img</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Link</th>
+            <th colspan="2">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@(order++)</td>
+                <td><img width="50" src="~/assets/images/service/@item.ImageUrl" /></td>
+                <td>@item.Title</td>
+                <td>@item.Description</td>
+                <td>@item.Link</td>
+                <td><a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a></td>
+                <td><a asp-action="Delete" class="btn btn-danger">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

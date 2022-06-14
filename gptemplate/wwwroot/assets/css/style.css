@@ -1,0 +1,137 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+header nav div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: transparent !important;
+
+}
+
+header nav ul {
+    margin-bottom: 0 !important;
+}
+
+header nav .custom-nav-links .d-flex li {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+header nav .custom-nav-links .d-flex li a {
+    padding: 1rem 1.5rem;
+    color: #fff;
+}
+
+header nav .custom-nav-links .d-flex li a:hover {
+    color: #ffc451;
+}
+
+#hero {
+    position: relative;
+
+    z-index: 999;
+}
+
+#hero::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.bg-yellow {
+    background-color: #ffc451;
+}
+
+.yellow-dot {
+    color: #ffc451;
+}
+
+.bg-nav {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.title {
+    text-transform: uppercase;
+}
+
+h5.title {
+    color: gray;
+    position: relative;
+    display: inline;
+}
+
+h5.title::before {
+    position: absolute;
+    content: '';
+    width: 150px;
+    height: .5px;
+    background-color: #ffc451;
+    right: -160px;
+    top: 1rem;
+}
+
+p.title {
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.service-nav .nav-link {
+    color: black;
+    text-transform: uppercase;
+    border-radius: 2.5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.service-nav .nav-link:hover {
+    background-color: #ffc451;
+    color: black;
+}
+
+.service-nav .nav-link.active {
+    background-color: #ffc451;
+}
+
+#services .row .col-md-4 .m-2 {
+    height: 280px !important;
+}
+
+.service-hover {
+    opacity: 0;
+    transition: .3s;
+}
+
+#services .row .col-md-4 .m-2:hover .service-hover {
+    opacity: 1;
+}
+
+.background {
+    padding: 60px;
+    background-size: 100% !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+}
+
+.get-start {
+    padding: 7.5px 30px !important;
+}
